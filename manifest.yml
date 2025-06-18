@@ -1,0 +1,30 @@
+modules:
+  jiraServiceManagement:queuePage:
+    - key: jsm-forge-app-demo-hello-world-queue-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: JSM Forge App Demo
+  jiraServiceManagement:organizationPanel:
+    - key: jsm-forge-app-organization-panel
+      resource: main
+      render: native
+      title: JSM Forge App Organization Panel
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: ui/index.tsx
+app:
+  runtime:
+    name: nodejs20.x
+    snapshots: false
+  id: ari:cloud:ecosystem::app/b0ea8778-12df-4602-8e74-ca9d7a0c4de2
+permissions:
+  scopes:
+    - storage:app
+    - read:jira-work
+    - read:servicedesk-request
+
