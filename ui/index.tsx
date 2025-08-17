@@ -5,7 +5,6 @@ import ForgeReconciler, {
 
 import { jsmModuleKey } from "./constants";
 import { QueueModule } from "./components/QueueModule";
-import { OrganizationPanel } from "./components/OrganizationPanelModule";
 
 const App = () => {
   const context = useProductContext();
@@ -17,8 +16,6 @@ const App = () => {
     switch (moduleKey) {
       case jsmModuleKey.Queue: 
         return <QueueModule serviceDeskKey={serviceDeskKey} />
-      case jsmModuleKey.OrganizationPanel:
-        return <OrganizationPanel />
       default:
         return <QueueModule serviceDeskKey={serviceDeskKey} />
     }

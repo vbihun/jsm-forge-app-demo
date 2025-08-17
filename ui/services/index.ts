@@ -28,8 +28,11 @@ export const getServiceDesks = (): Promise<ResolverResponse> => {
   return invoke("getServiceDesks");
 };
 
-export const setStorageData = (): Promise<ResolverResponse> => {
-  return invoke("setStorageData")
+export const setStorageData = (key: string, value: string): Promise<ResolverResponse> => {
+  return invoke("setStorageData", {
+    key,
+    value,
+  })
 };
 
 export const getStorageData = (): Promise<ResolverResponse> => {

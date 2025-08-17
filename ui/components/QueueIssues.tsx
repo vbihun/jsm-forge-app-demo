@@ -1,4 +1,4 @@
-import { Box, Spinner, Text } from "@forge/react";
+import { Box, Inline, Spinner, Text } from "@forge/react";
 
 export const QueueIssues = ({
   isLoading,
@@ -17,14 +17,14 @@ export const QueueIssues = ({
   }
 
   return (
-    <Box>
+    <Inline space="space.250" alignInline="start">
       {queueIssues.map((queueIssue) => (
-        <Box key={`queue-issue-${queueIssue.id}`}>
+        <Box key={`queue-issue-${queueIssue.id}`} paddingBlockStart='space.100'>
           <Text><Text as='strong'>Key:</Text> {queueIssue.key}</Text>
           <Text><Text as='strong'>Description: </Text> {queueIssue.fields.status.description}</Text>
           <Text><Text as='strong'>Status:</Text> {queueIssue.fields.status.name}</Text>
         </Box>
       ))}
-    </Box>
+    </Inline>
   );
 };

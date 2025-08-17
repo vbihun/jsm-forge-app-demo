@@ -1,8 +1,8 @@
 import kvs from "@forge/kvs";
 
-export const setStorageData = async () => {
+export const setStorageData = async (key: string, value: string) => {
   try {
-    await kvs.set("mock-key", "mock-value");
+    await kvs.set(key, value);
 
     return {
       success: true,
@@ -18,7 +18,7 @@ export const setStorageData = async () => {
 
 export const getStorageData = async () => {
   try {
-    const value = await kvs.get("mock-key");
+    const value = await kvs.get("storage-field");
 
     return {
       success: true,

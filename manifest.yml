@@ -5,12 +5,7 @@ modules:
       resolver:
         function: resolver
       render: native
-      title: JSM Forge App Demo
-  jiraServiceManagement:organizationPanel:
-    - key: jsm-forge-app-organization-panel
-      resource: main
-      render: native
-      title: JSM Forge App Organization Panel
+      title: Training App Queue Page
   function:
     - key: resolver
       handler: index.handler
@@ -20,11 +15,9 @@ resources:
 app:
   runtime:
     name: nodejs20.x
-    snapshots: false
-  id: ari:cloud:ecosystem::app/b0ea8778-12df-4602-8e74-ca9d7a0c4de2
+  id: ari:cloud:ecosystem::app/052fd576-9321-41d4-8f0c-713d83acd87c
 permissions:
   scopes:
     - storage:app
     - read:jira-work
     - read:servicedesk-request
-

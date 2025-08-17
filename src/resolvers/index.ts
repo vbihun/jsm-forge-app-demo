@@ -27,7 +27,8 @@ resolver.define("getServiceDesks", async (req) => {
 });
 
 resolver.define("setStorageData", async (req) => {
-  return setStorageData();
+  const { key, value } = req.payload;
+  return setStorageData(key, value);
 });
 
 resolver.define("getStorageData", async (req) => {
